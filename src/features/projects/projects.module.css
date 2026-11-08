@@ -1,0 +1,518 @@
+/* Projects lane — scoped styles. No global CSS (Foundation owns globals).
+   HighCastle Nocturne Signal tokens. */
+
+.hcProjects {
+  --hc-bg: #080d1a;
+  --hc-panel: #10192a;
+  --hc-panel-2: #0c1425;
+  --hc-mint: #62f5d1;
+  --hc-violet: #a48bff;
+  --hc-cyan: #63cfff;
+  --hc-coral: #ff708a;
+  --hc-text: #e8eefc;
+  --hc-muted: #93a1bd;
+  --hc-line: #22304d;
+  background: var(--hc-bg);
+  color: var(--hc-text);
+  min-height: 100%;
+  padding: 1.5rem;
+  font-family: inherit;
+}
+
+.hcInner {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.hcHeaderRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.hcEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hc-muted);
+  margin: 0 0 0.35rem;
+}
+
+.hcTitle {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hcSubtitle {
+  color: var(--hc-muted);
+  margin: 0.4rem 0 0;
+  max-width: 44rem;
+  font-size: 0.95rem;
+}
+
+.hcBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid var(--hc-line);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  color: var(--hc-text);
+  background: var(--hc-panel);
+}
+
+.hcBadgeMint {
+  border-color: var(--hc-mint);
+  color: var(--hc-mint);
+}
+
+.hcBadgeViolet {
+  border-color: var(--hc-violet);
+  color: var(--hc-violet);
+}
+
+.hcBadgeCyan {
+  border-color: var(--hc-cyan);
+  color: var(--hc-cyan);
+}
+
+.hcBadgeCoral {
+  border-color: var(--hc-coral);
+  color: var(--hc-coral);
+}
+
+.hcDot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: currentColor;
+  flex: none;
+}
+
+.hcActions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.hcButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--hc-line);
+  background: var(--hc-panel);
+  color: var(--hc-text);
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hcButton:hover {
+  border-color: var(--hc-cyan);
+}
+
+.hcButton:focus-visible,
+.hcInput:focus-visible,
+.hcCardLink:focus-visible {
+  outline: 2px solid var(--hc-mint);
+  outline-offset: 2px;
+}
+
+.hcButtonPrimary {
+  background: var(--hc-mint);
+  border-color: var(--hc-mint);
+  color: #052018;
+}
+
+.hcButtonPrimary:hover {
+  border-color: var(--hc-text);
+}
+
+.hcButton[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.hcButtonGhost {
+  background: transparent;
+}
+
+.hcToolbar {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.hcInput,
+.hcSelect,
+.hcTextarea {
+  background: var(--hc-panel-2);
+  border: 1px solid var(--hc-line);
+  border-radius: 0.6rem;
+  color: var(--hc-text);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.hcInput::placeholder,
+.hcTextarea::placeholder {
+  color: var(--hc-muted);
+}
+
+.hcSearch {
+  flex: 1 1 14rem;
+  max-width: 22rem;
+}
+
+.hcFilterGroup {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.hcChip {
+  border: 1px solid var(--hc-line);
+  background: transparent;
+  color: var(--hc-muted);
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hcChip[aria-pressed='true'] {
+  color: var(--hc-mint);
+  border-color: var(--hc-mint);
+}
+
+.hcGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hcCard {
+  background: var(--hc-panel);
+  border: 1px solid var(--hc-line);
+  border-radius: 0.9rem;
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.hcCardLink {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.hcCardLink:hover .hcCardName {
+  color: var(--hc-mint);
+}
+
+.hcCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.hcCardName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.hcCardDesc {
+  color: var(--hc-muted);
+  font-size: 0.88rem;
+  margin: 0;
+  flex: 1;
+}
+
+.hcCardMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--hc-muted);
+}
+
+.hcUrlText {
+  color: var(--hc-cyan);
+  word-break: break-all;
+}
+
+.hcCardFoot {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hcEmpty {
+  border: 1px dashed var(--hc-line);
+  border-radius: 0.9rem;
+  padding: 2rem;
+  text-align: center;
+  color: var(--hc-muted);
+}
+
+.hcNotice {
+  border: 1px solid var(--hc-cyan);
+  border-radius: 0.6rem;
+  background: var(--hc-panel);
+  padding: 0.8rem 1rem;
+  font-size: 0.85rem;
+  color: var(--hc-text);
+  margin: 0 0 1rem;
+}
+
+.hcNotice strong {
+  color: var(--hc-cyan);
+}
+
+.hcForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--hc-panel);
+  border: 1px solid var(--hc-line);
+  border-radius: 0.9rem;
+  padding: 1.25rem;
+}
+
+.hcField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.hcLabel {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.hcHint {
+  font-size: 0.8rem;
+  color: var(--hc-muted);
+  margin: 0;
+}
+
+.hcError {
+  font-size: 0.82rem;
+  color: var(--hc-coral);
+  margin: 0;
+}
+
+.hcFieldset {
+  border: 1px solid var(--hc-line);
+  border-radius: 0.6rem;
+  padding: 0.9rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.hcLegend {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0 0.4rem;
+}
+
+.hcRadio,
+.hcCheck {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  border: 1px solid var(--hc-line);
+  border-radius: 0.6rem;
+  padding: 0.7rem 0.8rem;
+  cursor: pointer;
+}
+
+.hcRadio:hover,
+.hcCheck:hover {
+  border-color: var(--hc-violet);
+}
+
+.hcRadioTitle,
+.hcCheckTitle {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.hcRadioDesc,
+.hcCheckDesc {
+  font-size: 0.82rem;
+  color: var(--hc-muted);
+  margin: 0.15rem 0 0;
+}
+
+.hcSteps {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0 0 0.25rem;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.hcStep {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--hc-muted);
+  border: 1px solid var(--hc-line);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+}
+
+.hcStep[aria-current='step'] {
+  color: #052018;
+  background: var(--hc-mint);
+  border-color: var(--hc-mint);
+}
+
+.hcReview {
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  background: var(--hc-panel-2);
+  border: 1px solid var(--hc-line);
+  border-radius: 0.6rem;
+  padding: 0.9rem 1rem;
+  margin: 0;
+}
+
+.hcReview div {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hcReview dt {
+  color: var(--hc-muted);
+  min-width: 7rem;
+}
+
+.hcReview dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.hcDetailGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1rem;
+}
+
+.hcPanel {
+  background: var(--hc-panel);
+  border: 1px solid var(--hc-line);
+  border-radius: 0.9rem;
+  padding: 1.1rem;
+}
+
+.hcPanel h2 {
+  font-size: 1rem;
+  margin: 0 0 0.6rem;
+}
+
+.hcKeyValues {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.hcKeyValues div {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hcKeyValues dt {
+  color: var(--hc-muted);
+  min-width: 7rem;
+}
+
+.hcKeyValues dd {
+  margin: 0;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.hcActivity {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+}
+
+.hcActivity li {
+  border-left: 2px solid var(--hc-violet);
+  padding-left: 0.7rem;
+}
+
+.hcActivity time {
+  color: var(--hc-muted);
+  display: block;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 720px) {
+  .hcProjects {
+    padding: 1rem;
+  }
+
+  .hcTitle {
+    font-size: 1.4rem;
+  }
+
+  .hcDetailGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hcSearch {
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hcProjects * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

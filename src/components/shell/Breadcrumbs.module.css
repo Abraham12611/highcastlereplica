@@ -1,0 +1,50 @@
+.nav {
+  min-width: 0;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-width: 0;
+}
+
+.separator {
+  color: rgba(139, 152, 179, 0.55);
+}
+
+.link {
+  color: #8b98b3;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #e8eef7;
+  text-decoration: underline;
+}
+
+.link:focus-visible {
+  outline: 2px solid #62f5d1;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+.current {
+  color: #e8eef7;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

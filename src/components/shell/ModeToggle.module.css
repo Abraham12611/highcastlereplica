@@ -1,0 +1,43 @@
+.group {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1875rem;
+  border-radius: 0.625rem;
+  background: #080d1a;
+  border: 1px solid rgba(139, 152, 179, 0.28);
+}
+
+.option {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #8b98b3;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.4375rem 0.75rem;
+  border-radius: 0.4375rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.option:hover {
+  color: #e8eef7;
+}
+
+.option:focus-visible {
+  outline: 2px solid #62f5d1;
+  outline-offset: 2px;
+}
+
+.selected {
+  background: rgba(98, 245, 209, 0.14);
+  color: #62f5d1;
+  box-shadow: inset 0 0 0 1px rgba(98, 245, 209, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .option {
+    transition: none;
+  }
+}

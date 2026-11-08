@@ -1,0 +1,150 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  flex: none;
+  min-height: 100dvh;
+  position: sticky;
+  top: 0;
+  background: #10192a;
+  border-right: 1px solid rgba(139, 152, 179, 0.18);
+  z-index: 40;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1rem 1rem 0.875rem;
+  border-bottom: 1px solid rgba(139, 152, 179, 0.16);
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex: none;
+  border-radius: 0.5625rem;
+  font-weight: 800;
+  font-size: 1rem;
+  color: #080d1a;
+  background: #62f5d1;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.brandName {
+  color: #e8eef7;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+}
+
+.workspace {
+  color: #8b98b3;
+  font-size: 0.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.75rem 0.625rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5625rem 0.625rem;
+  border-radius: 0.5625rem;
+  color: #aab6cf;
+  font-size: 0.8375rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link:hover {
+  background: rgba(99, 207, 255, 0.08);
+  color: #e8eef7;
+}
+
+.link:focus-visible {
+  outline: 2px solid #62f5d1;
+  outline-offset: 2px;
+}
+
+.active {
+  background: rgba(98, 245, 209, 0.1);
+  color: #62f5d1;
+  box-shadow: inset 0 0 0 1px rgba(98, 245, 209, 0.28);
+}
+
+.icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex: none;
+}
+
+.label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.875rem 1rem 1rem;
+  border-top: 1px solid rgba(139, 152, 179, 0.16);
+}
+
+.footNote {
+  margin: 0;
+  font-size: 0.6875rem;
+  line-height: 1.45;
+  color: #8b98b3;
+}
+
+/* Mobile drawer: off-canvas until opened. Desktop keeps the fixed rail. */
+@media (max-width: 56.25rem) {
+  .aside {
+    position: fixed;
+    inset: 0 auto 0 0;
+    transform: translateX(-102%);
+    transition: transform 0.22s ease;
+    box-shadow: none;
+  }
+
+  .open {
+    transform: translateX(0);
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.55);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aside {
+    transition: none;
+  }
+}
